@@ -1,5 +1,4 @@
 from rws2 import RWS2
-from typing import Union
 import urllib3
 import json
 """
@@ -52,11 +51,11 @@ while not stop:  # while loop for user to interact with robot until user stops
             count += 1
 
     elif userinput == 2:  # Set RAPID Variable
-        print("Set X and Y variables into the RAPID code.\n")
+        print("Set X value of the first box into the RAPID code.\n")
 
         phong.request_mastership()  # need mastership to set variable
         print("Initial value: ", phong.get_rapid_variable("x_pos"))
-        phong.set_rapid_variable("x_pos", 100)
+        phong.set_rapid_variable("x_pos", 200)
         print("New value: ", phong.get_rapid_variable("x_pos"))
 
         phong.save_program_to_controller("Capstone_2_finalize")  # save
@@ -72,7 +71,7 @@ while not stop:  # while loop for user to interact with robot until user stops
 
     elif userinput == 5:  # Execute the RAPID Code.
         print("Executing the RAPID code.\n")
-        phong.start_RAPID()
+        phong.start_RAPID(True)
 
     elif userinput == 6:  # stop the RAPID Code.
         print("Stop running the RAPID code.\n")
@@ -82,14 +81,15 @@ while not stop:  # while loop for user to interact with robot until user stops
         print("Set a new RAPID variable.\n")
 
         varname = str(input("Enter variable name: "))
-        varvalue = Union[float, int, str](
+        varvalue = int(
             input("Enter variable value (float, int, str): "))
         phong.set_RAPID_variable(varname, varvalue)
 
         phong.get_rapid_variable(varname)  # check
 
     elif userinput == 8:  # get rapid variable
-        phong.get_rapid_variable(varname)
+        varname = str(input("Enter variable name: "))
+        print(phong.get_rapid_variable(varname))
 
     elif userinput == 9:  # retrieve robot data
         print("Retrieving robot data.\n")
