@@ -15,4 +15,4 @@ The library should then be installed and you should be able to call it in Python
 ## How to use
 
 - The class `RWS` in `RWS2.py` implements the Robot Web Server protocol as specified by ABB. Documentation is in the code.
-- The file `main.py` runs a simple console application to interact with the Robot Controller. Run the python file to start.
+- The file `main.py` runs a simple console application to interact with the Robot Controller. After opening the RobotStudio application and the virtual controller, run the Python file to start.
