@@ -1,0 +1,6 @@
+numpy==1.23.5
+Requests==2.31.0
+urllib3==1.26.14
+xmltodict==0.13.0
+flit==3.9.0
+flit_core==3.9.0
