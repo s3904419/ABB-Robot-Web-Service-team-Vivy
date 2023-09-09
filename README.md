@@ -11,7 +11,7 @@ User should have already installed Python and pip on their computer.
 ## Build and Test
 
 1. Clone/fork the repo from Github.
-2. Install packages with pip: `pip -r requirements.txt`
+2. Install necessary packages with pip: `pip install -r requirements.txt`
 3. Run `pip install -e .` in the root folder to install rws2 in editable mode (`pip install .` is enough if you do not plan to contribute).
 
 The library should then be installed and you should be able to call it in Python with `import rws2`.
