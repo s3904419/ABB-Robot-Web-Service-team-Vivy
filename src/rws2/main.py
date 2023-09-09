@@ -55,7 +55,7 @@ while not stop:  # while loop for user to interact with robot until user stops
 
         phong.request_mastership()  # need mastership to set variable
         print("Initial value: ", phong.get_rapid_variable("x_pos"))
-        phong.set_rapid_variable("x_pos", 200)
+        phong.set_rapid_variable("x_pos", data[0]['x'])
         print("New value: ", phong.get_rapid_variable("x_pos"))
 
         phong.save_program_to_controller("Capstone_2_finalize")  # save
