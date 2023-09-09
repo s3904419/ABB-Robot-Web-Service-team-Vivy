@@ -6,7 +6,7 @@ Code updated from [ABB Robot Web Service](https://github.com/prinsWindy/ABB-Robo
 
 ## Pre-requisite
 
-User should have already installed Python and pip on their computer. 
+User should have already installed Python and RobotStudio on their computer. 
 
 ## Build and Test
 
