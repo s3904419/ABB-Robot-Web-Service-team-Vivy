@@ -4,6 +4,10 @@ This package provides code to interact with [ABB robot web service](https://deve
 
 Code updated from [ABB Robot Web Service](https://github.com/prinsWindy/ABB-Robot-Machine-Vision/tree/master/RobotWebServices).
 
+## Pre-requisite
+
+User should have already installed Python and pip on their computer. 
+
 ## Build and Test
 
 1. Clone/fork the repo from Github.
