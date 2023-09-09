@@ -1,0 +1,10 @@
+.idea
+/build
+/dist
+demonstrations/approaching
+*.json
+!demonstrations/*.json
+!trajectory_data/*.json
+*egg-info
+*__pycache__*
+./tmp
