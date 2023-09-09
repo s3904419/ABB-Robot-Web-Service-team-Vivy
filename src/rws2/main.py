@@ -19,7 +19,7 @@ data = json.load(f)
 # starts communicating with RobotWare through Robot Web Services
 # local IP: https://127.0.0.1:80
 # change address to robot IP address accordingly if connecting to the real robot.
-phong = RWS2.RWS2("https://127.0.0.1:80")
+phong = RWS2.RWS("https://127.0.0.1:80")
 
 stop = False
 while not stop:  # while loop for user to interact with robot until user stops
@@ -59,7 +59,7 @@ while not stop:  # while loop for user to interact with robot until user stops
         phong.set_rapid_variable("x_pos", 100)
         print("New value: ", phong.get_rapid_variable("x_pos"))
 
-        phong.save_program_to_controller()  # save
+        phong.save_program_to_controller("Capstone_2_finalize")  # save
         phong.release_mastership()
 
     elif userinput == 3:  # Turn motors on
